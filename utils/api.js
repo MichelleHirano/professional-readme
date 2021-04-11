@@ -5,7 +5,7 @@ const api = {
         try {let response = await axios
 
         //URL
-        .get('https://api.github.com/users/${userResponse.userName}');
+        .get(`https://api.github.com/users/${userResponse.userName}`);
         return response.data;
     }
         catch (error) {

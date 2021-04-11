@@ -94,8 +94,15 @@ function generateMarkdown(userResponse, userInfo) {
     
     ${userResponse.license}
     `;
-  
-    // Return markdown
+
+    //Developer Section
+    let dev =
+    `
+    ## Developer Information
+    ![Developer Profile Picture](${userInfo.avatar_url})
+    Email: ${userInfo.email}
+    `
+    draftMarkdown += dev;
     return draftMarkdown;
     
 }

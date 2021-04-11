@@ -11,7 +11,7 @@ const generateMarkdown = require('./utils/generateMarkdown');
 const promptUser = [
         {
             type:'input',
-            name:'username',
+            name:'userName',
             message: 'What is your Github username? (no @)',
             default:'MichelleHirano',
             //validate
