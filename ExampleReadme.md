@@ -1,28 +1,34 @@
-# Get It Done
+# README Generator
     
-    ![Badge for GitHub repo top language](https://img.shields.io/github/languages/top/undefined/det-it-done?style=flat&logo=appveyor) 
+    ![Badge for GitHub repo top language](https://img.shields.io/github/languages/top/undefined/professional-readme?style=flat&logo=appveyor) 
     
-    ![Badge for GitHub last commit](https://img.shields.io/github/last-commit/undefined/det-it-done?style=flat&logo=appveyor) 
+    ![Badge for GitHub last commit](https://img.shields.io/github/last-commit/undefined/professional-readme?style=flat&logo=appveyor) 
     
     Check out the badges hosted by [shields.io](https://shields.io/). 
     
     ## Description
     
-     DESCRIPTION HERERERERERRE
+    A qualty README generator for all your projects.
 
     ## Table of Contents
  - [Installation](#installation)  
- - [Usage](#usage)
+ - [Usage](#usage) 
+ - [Contributors](#credits)
+ - [Tests](#tests)
  * [License](#license) 
     
     ## Installation
     
     
-    download
+    Use NPM install inquirer.
     
     ## Usage 
     
-    stuff
+    This project was created for UCLA Bootcamp Challenge 9
+    
+    ## Tests
+    
+    No additional tests were run
     
     ## License
     
