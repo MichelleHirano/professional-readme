@@ -72,13 +72,20 @@ inquirer.prompt(
             validate: (value)=> {if (value){return true} else {return "I need a value to contine"}}, 
         }
     ]
-)
+).then(({
+    title,
+    installation,
+    instructions,
+    credit,
+    license,
+    git,
+    linkedin,
+    email,
+    usage,
+    contibution
+}) =>{
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+    //template
+    const template = 
 
-// TODO: Create a function to initialize app
-function init() {}
-
-// Function call to initialize app
-init();
+})
