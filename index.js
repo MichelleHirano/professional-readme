@@ -13,6 +13,7 @@ const promptUser = [
             type:'input',
             name:'username',
             message: 'What is your Github username? (no @)',
+            default:'MichelleHirano',
             //validate
             validate: (value)=> {if (value){return true} else {return "I need a value to contine"}},
          },
@@ -21,6 +22,7 @@ const promptUser = [
             type:'input',
             name:'repo',
             message: 'What is the name of your GitHub repo?',
+            default:'det-it-done',
             //validate
             validate: (value)=> {if (value){return true} else {return "I need a value to contine"}},
          },
@@ -29,6 +31,7 @@ const promptUser = [
             type:'input',
             name:'title',
             message: 'What is the project title?',
+            default:'Get It Done',
             //validate
             validate: (value)=> {if (value){return true} else {return "I need a value to contine"}},
         },
@@ -36,6 +39,7 @@ const promptUser = [
             type:'input',
             name:'description',
             message: 'Write a brief description of your project:',
+            default: ' DESCRIPTION HERERERERERRE',
             //validate
             validate: (value)=> {if (value){return true} else {return "I need a value to contine"}},
         },
@@ -43,6 +47,7 @@ const promptUser = [
             type:'input',
             name:'installation',
             message: 'How do you install your project?',
+            default:'download',
             //validate
             validate: (value)=> {if (value){return true} else {return "I need a value to contine"}},  
         },
@@ -50,6 +55,7 @@ const promptUser = [
             type:'input',
             name:'usage',
             message: 'What is this project used for',
+            default: 'stuff',
             //validate
             validate: (value)=> {if (value){return true} else {return "I need a value to contine"}},  
         },
@@ -85,6 +91,7 @@ const promptUser = [
             type:'input',
             name:'email',
             message: 'What is your email?',
+            default:'michelle@gmail.com',
             //validate
             validate: (value)=> {if (value){return true} else {return "I need a value to contine"}}, 
         }

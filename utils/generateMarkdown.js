@@ -3,17 +3,17 @@ function generateMarkdown(userResponse, userInfo) {
     //Generate Table of Contents
     let generateTable = '## Table of Contents';
 
-    //installation
-    if (userResponse.installation !== "") {generateTable += `* [Installation] (#installation)` };
+        //installation
+        if (userResponse.installation !== '') {generateTable +=  `\n - [Installation](#installation)  ` };
 
-    //usage
-    if (userResponse.usage !== "") {generateTable += `* [Usage] (#usage)`};
+        //usage
+        if (userResponse.usage !== '') {generateTable += `\n - [Usage](#usage)`};
 
-    //contributors
-    if (userResponse.constributing !== "") {generateTable += `*[Contributors] (#credits)` };
+        //contributors
+        if (userResponse.credits !== '') {generateTable += ` \n - [Contributors](#credits)` };
 
-    //tests
-    if (userResponse.tests !== "") {generateTable += `*[Tests] (#tests)` };
+        //tests
+        if (userResponse.tests !== '') {generateTable += `\n - [Tests](#tests)` };
 
     //Markdown for title and badges
     let draftMarkdown =
@@ -35,7 +35,7 @@ function generateMarkdown(userResponse, userInfo) {
     draftMarkdown += generateTable;
 
     //License
-    draftMarkdown += `* [License] (#license)`;
+    draftMarkdown += `\n * [License](#license) `;
 
 
   // Installation
