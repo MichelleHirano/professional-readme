@@ -78,9 +78,7 @@ const promptUser = [
         {
             type:'input',
             name:'tests',
-            message: 'If applicable, provide anytests written for your application and examples on how to run them.',
-            //validate
-            validate: (value)=> {if (value){return true} else {return "I need a value to contine"}}, 
+            message: 'If applicable, provide anytests written for your application and examples on how to run them.', 
         },
 
         {
@@ -92,3 +90,28 @@ const promptUser = [
         }
     ];
 
+async function init() {
+    try{
+        //inquirer questions
+        const userResponse = await inquirer.prompt(promptUser);
+        console.log("Your responses:", userResponse);
+        console.log("Thank you for your responses! Fetching GitHub data...");
+
+        //call GitHub
+        const userInfo = await api.userName(userResponse);
+        console.log("Your GitHub info:", userInfo);
+
+        //generate Markdown
+        console.log("Generating your README...");
+        const markdown = generateMarkdown(userResponse, userInfo);
+        console.log(markdown);
+
+        //write to file
+        await writeFileAsync('ExampleReadme.md', markdown);
+    }
+    catch(error){
+        console.log(error);
+    }
+};
+
+init();

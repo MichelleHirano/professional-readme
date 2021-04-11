@@ -39,7 +39,7 @@ function generateMarkdown(userResponse, userInfo) {
 
 
   // Installation
-  if (userResponses.installation !== '') {
+  if (userResponse.installation !== '') {
   
     draftMarkdown +=
     `
@@ -48,12 +48,12 @@ function generateMarkdown(userResponse, userInfo) {
     
     *Steps required to install project:*
     
-    ${userResponses.installation}`
+    ${userResponse.installation}`
     };
     
   
     //Usage
-    if (userResponses.usage !== '') {
+    if (userResponse.usage !== '') {
     
     draftMarkdown +=
     
@@ -63,24 +63,24 @@ function generateMarkdown(userResponse, userInfo) {
     
     *Instructions and examples for use:*
     
-    ${userResponses.usage}`
+    ${userResponse.usage}`
     };
     
     
     //Contributing
-    if (userResponses.credits !== '') {
+    if (userResponse.credits !== '') {
     `
     
     ## Contributing
     
     *If you would like to contribute it, you can follow these guidelines for how to do so.*
     
-    ${userResponses.credits}`
+    ${userResponse.credits}`
     };
     
   
     //Tests
-    if (userResponses.tests !== '') {
+    if (userResponse.tests !== '') {
     
     draftMarkdown +=
     `
@@ -89,7 +89,7 @@ function generateMarkdown(userResponse, userInfo) {
     
     *Tests for application and how to run them:*
     
-    ${userResponses.tests}`
+    ${userResponse.tests}`
     };
   
   
@@ -99,7 +99,7 @@ function generateMarkdown(userResponse, userInfo) {
     
     ## License
     
-    ${userResponses.license}
+    ${userResponse.license}
     `;
   
     // Return markdown
