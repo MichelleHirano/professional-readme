@@ -4,7 +4,8 @@ const inquirer = require("inquirer");
 const util = require('util');
 
 // TODO: Create an array of questions for user input
-inquirer.prompt(
+const promptUser = () => {
+    return inquirer.prompt(
     [
         {
             type:'input',
@@ -37,15 +38,15 @@ inquirer.prompt(
         {
             type:'input',
             name:'credits',
-            message: 'List any contributors:',
+            message:  'Any additional contributors?',
             //validate
             validate: (value)=> {if (value){return true} else {return "I need a value to contine"}},  
         },
         {
-            type:'list',
+            type:'checkbox',
             name:'license',
             message: 'Choose the appropriate license for this project:',
-            choice:[
+            choices:[
                 "apache",
                 "academic",
                 "GNU",
@@ -72,20 +73,6 @@ inquirer.prompt(
             validate: (value)=> {if (value){return true} else {return "I need a value to contine"}}, 
         }
     ]
-).then(({
-    title,
-    installation,
-    instructions,
-    credit,
-    license,
-    git,
-    linkedin,
-    email,
-    usage,
-    contibution
-}) =>{
-
-    //template
-    const template = 
-
-})
+)
+};
+promptUser().then(answers => console.log (answers));
