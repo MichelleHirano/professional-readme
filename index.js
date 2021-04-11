@@ -3,10 +3,28 @@ const fs = require('fs');
 const inquirer = require("inquirer");
 const util = require('util');
 
+//API and Makrdown
+const api = require('./utils/api');
+const generateMarkdown = require('./utils/generateMarkdown');
+
 // TODO: Create an array of questions for user input
-const promptUser = () => {
-    return inquirer.prompt(
-    [
+const promptUser = [
+        {
+            type:'input',
+            name:'username',
+            message: 'What is your Github username? (no @)',
+            //validate
+            validate: (value)=> {if (value){return true} else {return "I need a value to contine"}},
+         },
+
+         {
+            type:'input',
+            name:'repo',
+            message: 'What is the name of your GitHub repo?',
+            //validate
+            validate: (value)=> {if (value){return true} else {return "I need a value to contine"}},
+         },
+    
         {
             type:'input',
             name:'projectTitle',
@@ -39,8 +57,6 @@ const promptUser = () => {
             type:'input',
             name:'credits',
             message:  'Any additional contributors?',
-            //validate
-            validate: (value)=> {if (value){return true} else {return "I need a value to contine"}},  
         },
         {
             type:'checkbox',
@@ -58,13 +74,7 @@ const promptUser = () => {
             //validate
             validate: (value)=> {if (value){return true} else {return "I need a value to contine"}},  
         },
-        {
-            type:'input',
-            name:'username',
-            message: 'GitHub username:',
-            //validate
-            validate: (value)=> {if (value){return true} else {return "I need a value to contine"}}, 
-        },
+
         {
             type:'input',
             name:'email',
@@ -72,7 +82,5 @@ const promptUser = () => {
             //validate
             validate: (value)=> {if (value){return true} else {return "I need a value to contine"}}, 
         }
-    ]
-)
-};
-promptUser().then(answers => console.log (answers));
+    ];
+
