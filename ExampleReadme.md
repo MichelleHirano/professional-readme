@@ -18,7 +18,7 @@
     ## Installation
     
     
-    download it?
+    download
     
     ## Usage 
     
