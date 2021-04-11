@@ -27,7 +27,7 @@ const promptUser = [
     
         {
             type:'input',
-            name:'projectTitle',
+            name:'title',
             message: 'What is the project title?',
             //validate
             validate: (value)=> {if (value){return true} else {return "I need a value to contine"}},
@@ -73,6 +73,14 @@ const promptUser = [
             ],
             //validate
             validate: (value)=> {if (value){return true} else {return "I need a value to contine"}},  
+        },
+
+        {
+            type:'input',
+            name:'tests',
+            message: 'If applicable, provide anytests written for your application and examples on how to run them.',
+            //validate
+            validate: (value)=> {if (value){return true} else {return "I need a value to contine"}}, 
         },
 
         {
