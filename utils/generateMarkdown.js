@@ -4,16 +4,16 @@ function generateMarkdown(userResponse, userInfo) {
     let generateTable = '## Table of Contents';
 
     //installation
-    if (userResponse.installation !== "") {generateTable +=' *[Installation] (#installation)' };
+    if (userResponse.installation !== "") {generateTable += `* [Installation] (#installation)` };
 
     //usage
-    if (userResponse.usage !== "") {generateTable +=' *[Usage] (#usage)' };
+    if (userResponse.usage !== "") {generateTable += `* [Usage] (#usage)`};
 
     //contributors
-    if (userResponse.constributing !== "") {generateTable +=' *[Contributors] (#credits)' };
+    if (userResponse.constributing !== "") {generateTable += `*[Contributors] (#credits)` };
 
     //tests
-    if (userResponse.tests !== "") {generateTable +=' *[Tests] (#tests)' };
+    if (userResponse.tests !== "") {generateTable += `*[Tests] (#tests)` };
 
     //Markdown for title and badges
     let draftMarkdown =
@@ -28,14 +28,14 @@ function generateMarkdown(userResponse, userInfo) {
     ## Description
     
     ${userResponse.description}
+
     `
 
     //Table of Contents
     draftMarkdown += generateTable;
 
     //License
-    draftMarkdown += `
-    * [License] (#license)`;
+    draftMarkdown += `* [License] (#license)`;
 
 
   // Installation
@@ -46,7 +46,6 @@ function generateMarkdown(userResponse, userInfo) {
     
     ## Installation
     
-    *Steps required to install project:*
     
     ${userResponse.installation}`
     };
@@ -61,8 +60,6 @@ function generateMarkdown(userResponse, userInfo) {
     
     ## Usage 
     
-    *Instructions and examples for use:*
-    
     ${userResponse.usage}`
     };
     
@@ -72,8 +69,6 @@ function generateMarkdown(userResponse, userInfo) {
     `
     
     ## Contributing
-    
-    *If you would like to contribute it, you can follow these guidelines for how to do so.*
     
     ${userResponse.credits}`
     };
@@ -86,8 +81,6 @@ function generateMarkdown(userResponse, userInfo) {
     `
     
     ## Tests
-    
-    *Tests for application and how to run them:*
     
     ${userResponse.tests}`
     };
