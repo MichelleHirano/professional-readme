@@ -90,6 +90,18 @@ const promptUser = [
         }
     ];
 
+function writeToFile(fileName, data){
+    fs.writeFile(fileName, data, err => {
+        if (err){
+            return console.log(err);
+        }
+        console.log("Success! Your README.md file has been generated")
+    });
+}
+
+    const writeFileAsync = util.promisify(writeToFile);
+
+
 async function init() {
     try{
         //inquirer questions
